@@ -5,30 +5,30 @@ using namespace std;
  
 class CGroup
 {
-        char *name; // імя
-        float height; // висота
+        char *name; // С–РјСЏ
+        float height; // РІРёСЃРѕС‚Р°
 		char female;
 public:
           char  *Getname() {return name;}
          char  & Getfemale() {return female;}
           float  & GetHigh() {return  height;} 
-        CGroup(int ); // Конструктор
+        CGroup(int ); // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 		   
-        void Show(); // Вивід інформациї на екран
+        void Show(); // Р’РёРІС–Рґ С–РЅС„РѕСЂРјР°С†РёС— РЅР° РµРєСЂР°РЅ
         ~CGroup() ;
 private:
 	void Del();
 	void Construct(int);
 };
 /////////////////////////////////////////////////////////////////
- CGroup:: CGroup(int n=20) // Конструктор
+ CGroup:: CGroup(int n=20) // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
  {
 	 Construct(n);
  };
  ///////////////////////////////////////////////////////////////
  void CGroup::Construct(int n){
 	 name=new char[n];
-                // Ввід данних:
+                // Р’РІС–Рґ РґР°РЅРЅРёС…:
                 cout<<" Name "; 
 				cin>>name;
 				cout<<"Enter female (m/w or M/W) ";
@@ -48,7 +48,7 @@ private:
  };
 
   ///////////////////////////////////////////////////////////////
- void CGroup:: Show() // Вивід інформациї на екран
+ void CGroup:: Show() // Р’РёРІС–Рґ С–РЅС„РѕСЂРјР°С†РёС— РЅР° РµРєСЂР°РЅ
  {
 	 cout<<setw(15)<<name<<" | "<<setw(0)<<setw(5)<<height<<" | "<<setw(0)<<setw(5)<<female<<" | "<<setw(0)<<endl;
  };
