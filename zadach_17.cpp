@@ -5,15 +5,15 @@ using namespace std;
  
 class CMountain
 {
-        char *name; // імя
-        float height; // висота
+        char *name; // С–РјСЏ
+        float height; // РІРёСЃРѕС‚Р°
  
         public:
 		char  *Getname() {return name;}
 		float  & GetHigh() {return  height;} 
-        CMountain(int ); // Конструктор
+        CMountain(int ); // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 		   
-        void Show(); // Вивід інформациї на екран
+        void Show(); // Р’РёРІС–Рґ С–РЅС„РѕСЂРјР°С†РёС— РЅР° РµРєСЂР°РЅ
         float sort(CMountain,CMountain);        
         ~CMountain() ;
 private:
@@ -21,13 +21,13 @@ private:
 	void Construct(int);
                 
 };
- CMountain:: CMountain(int n=20) // Конструктор
+ CMountain:: CMountain(int n=20) // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
  {
 	 Construct(n);
  };
  void CMountain::Construct(int n ){
 	  name=new char[n];
-                // Ввід данних:
+                // Р’РІС–Рґ РґР°РЅРЅРёС…:
                 cout<<" Name "; 
 				cin>>name;
                 cout<<" Height "; 
@@ -40,7 +40,7 @@ private:
                 cout<<endl;
  };
 
- void CMountain:: Show() // Вивід інформациї на екран
+ void CMountain:: Show() // Р’РёРІС–Рґ С–РЅС„РѕСЂРјР°С†РёС— РЅР° РµРєСЂР°РЅ
  {
 	 cout<<setw(15)<<name<<" | "<<setw(0)<<setw(5)<<height<<" | "<<setw(0)<<endl;
  };
